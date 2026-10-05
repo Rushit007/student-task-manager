@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#addTaskButton {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#addTaskButton:hover {
+    background: #1d4ed8;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #888;
+    margin: 20px 0;
+}
+
+#taskList {
+    list-style: none;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.task-text {
+    flex: 1;
+    word-break: break-word;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.complete-button,
+.delete-button {
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
+.complete-button {
+    background: #16a34a;
+}
+
+.delete-button {
+    background: #dc2626;
+}
+
+.complete-button:hover {
+    background: #15803d;
+}
+
+.delete-button:hover {
+    background: #b91c1c;
+}
+
+@media (max-width: 600px) {
+    .task-input {
+        flex-direction: column;
+    }
+    #addTaskButton {
+        width: 100%;
+    }
+    .task-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .task-buttons {
+        justify-content: flex-end;
+    }
+}
